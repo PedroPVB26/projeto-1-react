@@ -1,0 +1,135 @@
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero {
+    background:
+        linear-gradient(
+            135deg,
+            #0b4f71 0%,
+            #123d57 100%
+        );
+    color: white;
+    padding: 48px 0;
+}
+
+.hero-title {
+    font-weight: 700 !important;
+}
+
+.hero-subtitle {
+    color: rgba(255, 255, 255, 0.82);
+    font-weight: 400 !important;
+}
+
+.main-container {
+    flex: 1;
+    padding-top: 32px;
+    padding-bottom: 48px;
+}
+
+.search-section,
+.results-section {
+    background: white;
+    border: 1px solid #dce3e8;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.search-section {
+    margin-bottom: 28px;
+}
+
+.search-form {
+    margin-top: 20px;
+    align-items: center;
+}
+
+.search-button {
+    min-width: 130px !important;
+    min-height: 56px !important;
+}
+
+.section-title {
+    margin-bottom: 20px !important;
+}
+
+.section-alert {
+    margin-bottom: 20px !important;
+}
+
+.accident-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(300px, 1fr)
+        );
+    gap: 20px;
+}
+
+.accident-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #dce3e8;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.accident-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.state-container {
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+}
+
+.load-more-container {
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+}
+
+.dialog-loading {
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    padding: 24px 0;
+    background-color: #17212b;
+    color: #d9e1e8;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 32px 0;
+    }
+
+    .hero-title {
+        font-size: 2rem !important;
+    }
+
+    .search-section,
+    .results-section {
+        padding: 18px;
+    }
+
+    .accident-grid {
+        grid-template-columns: 1fr;
+    }
+}
